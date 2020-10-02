@@ -1,0 +1,24 @@
+{
+  "name": "goods_cost_calculator",
+  "version": "1.0.0",
+  "description": "goods cost calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelMikh/GoodsCostCalculator.git"
+  },
+  "keywords": [
+    "cost",
+    "calculator",
+    "JavaScript"
+  ],
+  "author": "Pavel Mikhailov <pamix1985@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelMikh/GoodsCostCalculator/issues"
+  },
+  "homepage": "https://github.com/PavelMikh/GoodsCostCalculator#readme"
+}
