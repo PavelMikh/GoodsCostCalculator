@@ -15,3 +15,131 @@ Git
 	Development
 		2.0.2
 		1 -----------------
+ ==================================
+
+1  В пустой папке проекта инициализируем Git
+2  Создаем .gitignore (node_modules, dist) 
+3	Добавляем удаленный репозиторий
+4	Инициализируем проект с помощю npm
+5	Создаем webpack.config.js
+6	Игнорируем entrypoint - в package.json добавляем "private": true . Так репо случайно не будет запаблишен.
+7	Устанавливаем webpack и webpack-cli https://webpack.js.org/guides/getting-started/
+8	Экспортируем js объект из webpack.config.js, который содержит конфигурацию webpack
+
+ ДАЛЕЕ НАЧИНАЕМ ДОБАВЛЯТЬ ПАРАМЕТРЫ В ЭТОТ ОБЪЕКТ:
+
+9	Добавляем пакет path для указания контекста, создаем директорию src и в ней пустой файл index.js
+10 Добавляем параметр context и в значение передаем путь к директории с исходниками path.resolve(__dirname, 'src')
+11 Добавляем параметр mode со значением 'development'
+12 Добавляем параметр entry - объект. Он принимает в себя точки входа. У нас она одна, поэтому в значение прердаем обычную строку 
+	'./index.js' 
+	PS: в п.27 будем подключать @babel/polyfill и добавлять его в массив entry первой точкой входа. 
+13 Добавляем параметр output - объект с указанием куда складывать итоговый бандл
+14 В package.json добавляем скрипты "start": "webpack" и "build": "webpack --mode production"
+
+Устанавливаем плагины
+
+15 Устанавливаем и подключаем 1-ый базовый плагин для работы с html - HTMLWebpackPlugin. Для автоматического добавления bundle.js к html.
+		Передаем в него в качестве параметра объект настроек со свойством template: 'index.html'. Путь не указываем т.к. есть контекст.
+16 В директории src создаем файл index.html
+17 В output {
+ 			filename: bundle.[hash].js
+			}
+		
+добавляем hash в название файла
+18 Устанавливаем и подключаем CopyWebpackPlugin для перетаскивания favicon.ico 
+19 Добавляем фавиконку в index.html
+20 Устанавливаем и подключаем MiniCssExtractPlugin
+
+21 Добавляем в конфигурацию свойство resolve - это объект со свойствами 
+	resolve {
+		// указываем какой тип файла обрабатывается по умолчанию
+		extensions: ['.js']
+		// создаем псевдонимы основным каталогам для удобства указания путей к файлам
+		alias: {
+			'@': path.resolve(__dirname, 'srs')
+			'@core': path.resolve(__dirname, 'src/core')
+		}
+	}
+
+Добавляем лоадеры
+
+22 Устанавливаем sass-loader и node-sass
+23 Тестируем добавление стилей (import стилей в index.js)
+24 Устанавливаем и настраиваем babel https://babeljs.io/setup/
+25 Устанавливаем @bable/preset-env
+26 В package.json добавляем "browserslist": "> 0.25%, not dead" - конфигурация для babel, для поддержки почти всех браузеров.
+27 Устанавливаем и подключаем @babel/polyfill для определения regeneratorRuntime в браузере (отсылка на PS в п.12) https://github.com/babel/babel/issues/8829
+28 Тестируем babel (async, await)
+
+Настройка билдов Production, Development
+
+29 Добавляем в конфиг системную переменную 
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = !isProd
+30 Добавляем пакет cross-env для автоматичесткого определения системы и задания правильного значения для NODE_ENV
+31 Добавляем в скрипты запуска сборки команды для cross-env для присваивания NODE_ENV значений 'production' или 'development'
+32 Настраиваем HTMLWebpackPlugin для того чтобы убрать в html для режима сборки 'production' все комментарии и пробелы
+33 Автоматизируем процесс создания имен для файлов сборки в зависимости от режима сборки.
+	const filename = ext => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`
+34 Для того чтобы для 'development' настроить sourceMap добавляем в конфиг свойство devtool (с тернарником: isDev ? 'sourceMap' : false)
+35 Устанавливаем и настраиваем DevServer.
+36 Добавляем флаг --open в скрипт start для того чтобы при запуске проект автоматически открывался в браузере
+37 Тестируем DevServer
+38 На данном этапе возможен баг - стили на DevServer не обновляются. Решение - добавить options для лоадера:
+	{
+    test: /\.s[ac]ss$/i,
+    use: [
+      {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          hmr: isDev,
+          reloadAll: true
+        }
+      },
+      'css-loader',
+      'sass-loader'
+    ],
+  },
+
+ Для режима 'development' добавляем Eslint
+
+ 39 Для этого устанавливаем eslint, eslint-loader, babel-eslint в список dev-dependenses. Для удобства подключения лоадеров создаем функцию 
+	const jsLoaders = () => {
+		const loaders = [
+			{
+				loader: 'babel-loader',
+				options: {
+					presets: ['@babel/preset-env']
+				}
+			}
+		]
+
+		if (isDev) {
+			loaders.push('eslint-loader')
+		}
+
+		return loaders
+	}
+
+40 В корне создаем файл .eslintrc - базовый конфиг для Eslint
+	{
+		"parser": "babel-eslint",
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true
+		},
+		"rules": {
+			"semi": "off",
+      "arrow-parens": "off",
+      "comma-dangle": "off",
+      "require-jsdoc": "off",
+      "operator-linebreak": "off"
+		},
+		"extends": ["eslint:recommended", "google"]
+	}
+41 В корне создаем пустой файл .eslintignore
+42 Устанавливаем пакет eslint-config-google как зависимость для разработки
+43 Подцепляем Eslint  редактору
+44 Пушим в репо, мержим с мастер веткой.
