@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-16T09:48:53.081Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="D6HumbGG_Dk9SaECfwzt" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-16T09:54:44.577Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="PqtXxOxumCcMi6aDKMLz" version="13.8.0" type="github">
   <diagram id="OjcXUjk-DIQqwPVsxsqD" name="Page-1">
     <mxGraphModel dx="797" dy="1663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -112,7 +112,7 @@
             <mxPoint x="510" y="540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-54" value="OrderElement" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-54" value="OrderComponent" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="560" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-55" value="Header" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
