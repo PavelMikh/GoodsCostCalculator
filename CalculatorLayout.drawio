@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-16T10:06:05.287Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="AeKRkcLgrTLZ45WlJwJb" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-16T16:40:52.580Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="O72GNRWCGxJK_Q3_jLHv" version="13.8.0" type="github">
   <diagram id="OjcXUjk-DIQqwPVsxsqD" name="Page-1">
     <mxGraphModel dx="797" dy="1663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -46,7 +46,7 @@
         <mxCell id="S-yuOK_J7WLUZWax7sDN-30" value="D" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="700" y="-30" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-2" value="product line" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-2" value="line" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="10" y="155" width="70" height="20" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-38" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -97,10 +97,10 @@
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-46" value="total order cost" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="170" y="260" width="530" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-50" value="add button" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-50" value="add" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="7.5" y="200" width="75" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-51" value="total sum" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="VqGfvAE1Vi9xgUBuAckZ-51" value="total" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="12.5" y="265" width="70" height="20" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-52" value="DOMListener" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
