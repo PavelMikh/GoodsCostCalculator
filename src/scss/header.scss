@@ -1,0 +1,21 @@
+@import '@/scss/variables';
+@import '@/scss/mixins';
+
+.order__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  padding: 8px 4px 0;
+
+  .input {
+   @include input;
+  }
+
+  .button {
+   @include button(red);
+  }
+} 
