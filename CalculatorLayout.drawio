@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-17T13:02:52.919Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="k4r-NDRAWfiKAXph1CDZ" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-17T13:03:41.579Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="9baKwM7YplQUZgU-zned" version="13.8.0" type="github">
   <diagram id="OjcXUjk-DIQqwPVsxsqD" name="Page-1">
     <mxGraphModel dx="796" dy="1663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -89,7 +89,7 @@
           <mxGeometry x="81" y="720" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-56" value="ProductList" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="358" y="760" width="120" height="40" as="geometry" />
+          <mxGeometry x="360" y="760" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-57" value="AddButton" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="450" y="640" width="118" height="40" as="geometry" />
@@ -173,10 +173,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dvaQS0S35Elj16P4WEGD-7" value="передаем конкретные реализации в компонент ProductList" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="580" width="340" height="20" as="geometry" />
+          <mxGeometry x="260" y="690" width="340" height="20" as="geometry" />
         </mxCell>
         <mxCell id="dvaQS0S35Elj16P4WEGD-8" value="Добавление в HTML" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="670" y="530" width="120" height="40" as="geometry" />
+          <mxGeometry x="358" y="700" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-74" value="передаем конкретные реализации в компонент Order" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
           <mxGeometry x="270" y="820" width="310" height="20" as="geometry" />
