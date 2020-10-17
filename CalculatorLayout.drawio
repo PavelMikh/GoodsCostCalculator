@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-17T11:37:56.012Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="y1cTBSWw0V0pXJfAhXrI" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-17T11:38:53.430Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="pCyxNnnPiKf8y0je_uAE" version="13.8.0" type="github">
   <diagram id="OjcXUjk-DIQqwPVsxsqD" name="Page-1">
     <mxGraphModel dx="796" dy="1663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -149,7 +149,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-69" value="Добавление в HTML" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="670" y="920" width="120" height="40" as="geometry" />
+          <mxGeometry x="360" y="830" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VqGfvAE1Vi9xgUBuAckZ-70" value="добавить&lt;br&gt;слушателя" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="346" y="450" width="40" height="20" as="geometry" />
