@@ -40,3 +40,9 @@
     border: 2px solid #1a73e8;
   }
 }
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
