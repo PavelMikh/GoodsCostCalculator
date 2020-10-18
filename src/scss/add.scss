@@ -17,13 +17,10 @@
     & span {
       font-size: 70px;
     }
-
-    &:active, &.active {
-      color: green;
-    }
   
     &:hover {
       background: #eee;
+      color: green;
       cursor: pointer;
     }
   }
