@@ -1,0 +1,39 @@
+@import '@/scss/variables';
+@import '@/scss/mixins';
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  
+  .input {
+    @include input;
+  }
+
+  .price,
+  .cost {
+    display: flex;
+    justify-content: center;
+    width: 110px;
+    min-width: 110px;
+    color: #000;
+    height: 20px;
+    font-size: 18px;
+    line-height: 22px;
+    outline: none;
+  }
+
+  .cost {
+    margin-right: 20px;
+  }
+
+  .count {
+    width: 150px;
+    min-width: 110px;
+    text-align: center;
+  }
+  
+  .button {
+    @include button(red);
+   }
+}

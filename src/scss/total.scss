@@ -1,0 +1,12 @@
+@import '@/scss/variables';
+@import '@/scss/mixins';
+
+.order__total {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: $header-height;
+  margin: 0 $list-padding;
+  font-size: 24px;
+  color: #000;
+}

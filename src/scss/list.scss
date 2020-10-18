@@ -1,0 +1,14 @@
+@import '@/scss/variables';
+@import '@/scss/mixins';
+
+.order__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: $header-height + $delimeter;
+  padding: 8px $list-padding;
+  height: $list-height;
+  min-height: 200px;
+  margin-bottom: 40px;
+}
