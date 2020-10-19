@@ -1,4 +1,5 @@
 import {OrderComponent} from '@core/OrderComponent'
+import {$} from '@core/dom'
 
 export class List extends OrderComponent {
   static className = 'order__list'
@@ -10,11 +11,9 @@ export class List extends OrderComponent {
   }
 
   getRoot() {
-    const $root = document.createElement('div')
-
+    const $root = $.create('div')
     this.components.forEach(Component => {
-      const $el = document.createElement('div')
-      $el.classList.add(Component.className)
+      const $el = $.create('div', Component.className)
       const component = new Component($el)
       $el.innerHTML = component.toHTML()
       $root.append($el)
