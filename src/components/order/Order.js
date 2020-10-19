@@ -1,3 +1,5 @@
+import {$} from '@core/dom'
+
 export class Order {
   constructor(selector, options) {
     this.$el = document.querySelector(selector)
@@ -6,11 +8,9 @@ export class Order {
   }
 
   getRoot() {
-    const $root = document.createElement('div')
-    $root.classList.add('order')
+    const $root = $.create('div', 'order')
     this.components.forEach(Component => {
-      const $el = document.createElement('div')
-      $el.classList.add(Component.className)
+      const $el = $.create('div', Component.className)
       const component = new Component($el, this.childComponents)
       $el.innerHTML = component.toHTML()
       $root.append($el)
