@@ -2,7 +2,7 @@
 @import '@/scss/mixins';
 
 .order__header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -10,6 +10,8 @@
   justify-content: space-between;
   height: $header-height;
   padding: 8px 4px 0;
+  z-index: 100;
+  background: #fff;
 
   .input {
    @include input;

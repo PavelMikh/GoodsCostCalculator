@@ -6,10 +6,9 @@
   display: flex;
   justify-content: center;
   padding: 0 $list-padding;
-  margin-bottom: 20px;
 
   .add-button {
-    height: 80px;
+    height: $add-button-height;
     width: 80px;
     position: relative;
     padding: 5px;

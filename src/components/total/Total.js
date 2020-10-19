@@ -4,6 +4,6 @@ export class Total extends OrderComponent {
   static className = 'order__total'
 
   toHTML() {
-    return `<strong>Итоговая стоимость: 152.54 руб.</strong>`
+    return `<strong>Итоговая стоимость: 0 руб.</strong>`
   }
 }

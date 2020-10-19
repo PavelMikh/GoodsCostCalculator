@@ -3,8 +3,8 @@ import {OrderComponent} from '@core/OrderComponent'
 export class List extends OrderComponent {
   static className = 'order__list'
 
-  constructor($root, components) {
-    super($root)
+  constructor($rootElement, components) {
+    super($rootElement)
     this.components = components || []
     this.$el = this.getRoot()
   }

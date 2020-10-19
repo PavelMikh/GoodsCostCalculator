@@ -7,7 +7,8 @@ export class Header extends OrderComponent {
     return `
       <div>
         <input type="text" class="input" placeholder="Адрес заявки" value="" />
-        <input type="text" class="input" placeholder="Дата" value="" />
+        <input type="text" class="input" placeholder="Контактный телефон" 
+          value="" />
       </div>
       <div>
         <div class="button">
