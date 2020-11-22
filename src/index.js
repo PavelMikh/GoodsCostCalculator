@@ -8,7 +8,7 @@ import './scss/index.scss'
 
 const order = new Order('#app', {
   components: [Header, List, Total],
-  childComponents: [Line, Line, Line, Line, Line, Line, Line, Adder]
+  childComponents: [Line, Line, Line, Line, Line, Line, Adder]
 })
 
 order.render()
