@@ -3,12 +3,21 @@ import {Header} from '@/components/header/Header'
 import {List} from '@/components/list/List'
 import {Total} from '@/components/total/Total'
 import {Adder} from '@/components/adder/Adder'
-import {Line} from '@/components/line/Line'
+import {createStore} from '@core/createStore'
+import {rootReducer} from '@/redux/rootReducer'
+import {storage} from '@core/utils'
+import {initialState} from '@/redux/initialState'
 import './scss/index.scss'
 
+const store = createStore(rootReducer, initialState)
+
+store.subscribe(state => {
+  storage('calc-state', state)
+})
+
 const order = new Order('#app', {
-  components: [Header, List, Total],
-  childComponents: [Line, Line, Line, Line, Line, Line, Adder]
+  components: [Header, List, Adder, Total],
+  store
 })
 
 order.render()

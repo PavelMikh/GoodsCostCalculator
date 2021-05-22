@@ -5,6 +5,26 @@ export class Dom {
     : selector
   }
 
+  get inner() {
+    return this.$el.innerHTML
+  }
+
+  get data() {
+    return this.$el.dataset
+  }
+
+  text(text) {
+    if (typeof text === 'string') {
+      this.$el.textContent = text
+    }
+
+    if (this.$el.tagName.toLowerCase() === 'input') {
+      return this.$el.value
+    }
+
+    return this.$el.textContent
+  }
+
   html(html) {
     if (typeof html === 'string') {
       this.$el.innerHTML = html
@@ -18,8 +38,12 @@ export class Dom {
     return this
   }
 
-  on(type, callback) {
-    this.$el.addEventListener(type, callback)
+  on(eventType, callback) {
+    this.$el.addEventListener(eventType, callback)
+  }
+
+  off(eventType, callback) {
+    this.$el.removeEventListener(eventType, callback)
   }
 
   append(node) {
@@ -34,6 +58,23 @@ export class Dom {
     }
 
     return this
+  }
+
+  attr(name, value) {
+    this.$el.setAttribute(name, value)
+  }
+
+  find(selector) {
+    return this.$el.querySelector(selector)
+  }
+
+  remove(node) {
+    if (node instanceof Dom) {
+      node = node.$el
+    }
+
+    node.parentNode.removeChild(node)
+    return node
   }
 }
 

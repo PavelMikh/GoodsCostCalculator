@@ -1,37 +1,38 @@
 import {OrderComponent} from '@core/OrderComponent'
-import {$} from '@core/dom'
+import {add} from '@/components/list/list.template'
+import {isDelete, deleteLine} from '@/components/list/list.functions'
 
 export class List extends OrderComponent {
   static className = 'order__list'
 
-  constructor($rootElement, components) {
+  constructor($rootElement, options) {
     super($rootElement, {
       name: 'List',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     })
-    this.components = components || []
-    this.$el = this.getRoot().$el
   }
 
-  getRoot() {
-    const $root = $.create('div')
-    this.components = this.components.map(Component => {
-      const $el = $.create('div', Component.className)
-      const component = new Component($el)
-      $el.html(component.toHTML())
-      $root.append($el)
-      return component
-    })
+  prepare() {
+    this.adder = () => {
+      return add(this.$root)
+    }
+  }
 
-    return $root
+  init() {
+    super.init()
+
+    this.adder()
+    this.$on('adder:add-line', this.adder.bind(this))
   }
 
   toHTML() {
-    return `${this.$el.innerHTML}`
+    return `${this.$root.inner}`
   }
 
   onClick(event) {
-    console.log('click', event.target)
+    if (isDelete(event)) {
+      deleteLine(event, this.$root)
+    }
   }
 }
-

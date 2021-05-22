@@ -89,6 +89,6 @@ module.exports = {
   devtool: isDev ? 'sourceMap' : false,
   devServer: {
     port: 3000,
-    hot: true
+    hot: isDev
   }
 }

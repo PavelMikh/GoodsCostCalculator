@@ -1,0 +1,2 @@
+export const CHANGE_ADRESS = 'CHANGE_ADRESS'
+export const CHANGE_PHONE = 'CHANGE_PHONE'
