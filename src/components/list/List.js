@@ -1,6 +1,11 @@
 import {OrderComponent} from '@core/OrderComponent'
 import {add} from '@/components/list/list.template'
-import {isDelete, deleteLine} from '@/components/list/list.functions'
+import {
+  isDelete,
+  deleteLine,
+  isInput,
+  searchByInputValue
+} from '@/components/list/list.functions'
 
 export class List extends OrderComponent {
   static className = 'order__list'
@@ -8,9 +13,10 @@ export class List extends OrderComponent {
   constructor($rootElement, options) {
     super($rootElement, {
       name: 'List',
-      listeners: ['click'],
+      listeners: ['click', 'input'],
       ...options
     })
+    this.data = options.data
   }
 
   prepare() {
@@ -33,6 +39,13 @@ export class List extends OrderComponent {
   onClick(event) {
     if (isDelete(event)) {
       deleteLine(event, this.$root)
+    }
+  }
+
+  onInput(event) {
+    if (isInput(event)) {
+      const searchResult = searchByInputValue(event, this.data)
+      console.log(searchResult)
     }
   }
 }

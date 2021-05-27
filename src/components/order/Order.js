@@ -9,12 +9,14 @@ export class Order {
     this.emitter = new Emitter()
     this.store = options.store
     this.subscriber = new StoreSubscriber(this.store)
+    this.data = options.data
   }
 
   getRoot() {
     const options = {
       emitter: this.emitter,
-      store: this.store
+      store: this.store,
+      data: this.data
     }
 
     const $root = $.create('div', 'order')
